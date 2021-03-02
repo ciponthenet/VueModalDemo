@@ -20,12 +20,22 @@
     <a href="#" @click="showModal1 = true">Or click the link</a><br/>
     <button @click="showModal2 = true">Show Modal 2</button><br/>
 
+
+
     <!-- Single component modal -->
-    <Modal :visible="showSingleModal" @close="showSingleModal = false" :options="singleModalOptions"></Modal>
+    <Modal :visible="showSingleModal" @close="showSingleModal = false" :options="singleModalOptions">
+      <!--
+      <template v-slot:options="props">
+        <div style="color: green">{{ props.options.title }}</div>
+      </template>
+      -->
+    </Modal>
     <button @click="displaySingleModal('Just a sample title')">Show Single Modal</button><br/>
     <button @click="displaySingleModal('Another sample title')">Show Another Modal</button><br/>
     <br/><br/><br/>
-    
+
+
+
     <!-- Plugin Dialog -->
     <button @click="displayPluginModal('Context 1', 'Message one')">Show Context Modal 1</button>
     <button @click="displayPluginModal('Context 2', 'Message two')">Show Context Modal 2</button>

@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="container">
         <slot></slot>
-        <slot name="options" v-bind="options">
+        <slot name="options" v-bind:options="options">
           <div v-if="options">
             <h5>{{ options.title }}</h5>
             <h6>{{ options.message }}</h6>
